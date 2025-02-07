@@ -1,6 +1,9 @@
 # Nebby analysis result
 
-The folder are named after the schema `<cca>-<num_measurements>`.
+The folders are named after the schema 
+```
+<cca>-<num_measurements>
+```.
 
 | #  | BBR                | BIC                         | Cubic                       | Highspeed                   | HTCP                        | Reno      | Veno                        |
 |----|--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------------------|-----------|-----------------------------|
