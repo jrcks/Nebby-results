@@ -1,0 +1,325 @@
+bbr1        | BBR
+bbr10       | BBR
+bbr11       | BBR
+bbr12       | BBR
+bbr14       | BBR
+bbr15       | BBR
+bbr16       | BBR
+bbr17       | BBR
+bbr18       | BBR
+bbr2        | BBR
+bbr20       | BBR
+bbr21       | BBR
+bbr22       | BBR
+bbr23       | BBR
+bbr24       | BBR
+bbr25       | BBR
+bbr3        | BBR
+bbr4        | BBR
+bbr6        | BBR
+bbr7        | BBR
+bbr8        | BBR
+bbr9        | BBR
+bbr5        | BBR(Maybe)
+bic1        | BBR(Maybe)
+bic11       | BBR(Maybe)
+htcp1       | BBR(Maybe)
+htcp10      | BBR(Maybe)
+htcp11      | BBR(Maybe)
+htcp12      | BBR(Maybe)
+htcp13      | BBR(Maybe)
+htcp14      | BBR(Maybe)
+htcp15      | BBR(Maybe)
+htcp16      | BBR(Maybe)
+htcp17      | BBR(Maybe)
+htcp18      | BBR(Maybe)
+htcp19      | BBR(Maybe)
+htcp2       | BBR(Maybe)
+htcp20      | BBR(Maybe)
+htcp21      | BBR(Maybe)
+htcp22      | BBR(Maybe)
+htcp23      | BBR(Maybe)
+htcp24      | BBR(Maybe)
+htcp25      | BBR(Maybe)
+htcp3       | BBR(Maybe)
+htcp4       | BBR(Maybe)
+htcp5       | BBR(Maybe)
+htcp6       | BBR(Maybe)
+htcp7       | BBR(Maybe)
+htcp8       | BBR(Maybe)
+htcp9       | BBR(Maybe)
+bbr13       | NAN - NO FEATURES
+bbr19       | NAN - NO FEATURES
+bic2        | NAN - NO FEATURES
+bic20       | NAN - NO FEATURES
+bic22       | NAN - NO FEATURES
+bic23       | NAN - NO FEATURES
+bic4        | NAN - NO FEATURES
+bic5        | NAN - NO FEATURES
+bic6        | NAN - NO FEATURES
+bic7        | NAN - NO FEATURES
+yeah11      | NAN - NO FEATURES
+vegas1      | TOO MUCH MSE ERROR
+vegas10     | TOO MUCH MSE ERROR
+vegas11     | TOO MUCH MSE ERROR
+vegas12     | TOO MUCH MSE ERROR
+vegas13     | TOO MUCH MSE ERROR
+vegas14     | TOO MUCH MSE ERROR
+vegas16     | TOO MUCH MSE ERROR
+vegas17     | TOO MUCH MSE ERROR
+vegas18     | TOO MUCH MSE ERROR
+vegas19     | TOO MUCH MSE ERROR
+vegas2      | TOO MUCH MSE ERROR
+vegas20     | TOO MUCH MSE ERROR
+vegas22     | TOO MUCH MSE ERROR
+vegas23     | TOO MUCH MSE ERROR
+vegas24     | TOO MUCH MSE ERROR
+vegas25     | TOO MUCH MSE ERROR
+vegas3      | TOO MUCH MSE ERROR
+vegas4      | TOO MUCH MSE ERROR
+vegas5      | TOO MUCH MSE ERROR
+vegas6      | TOO MUCH MSE ERROR
+vegas7      | TOO MUCH MSE ERROR
+vegas9      | TOO MUCH MSE ERROR
+highspeed2  | Outlier with degree fit = 1
+scalable13  | Outlier with degree fit = 1
+scalable15  | Outlier with degree fit = 1
+scalable20  | Outlier with degree fit = 1
+scalable25  | Outlier with degree fit = 1
+scalable5   | Outlier with degree fit = 1
+scalable6   | Outlier with degree fit = 1
+yeah13      | Outlier with degree fit = 1
+yeah15      | Outlier with degree fit = 1
+yeah22      | Outlier with degree fit = 1
+yeah6       | Outlier with degree fit = 1
+yeah9       | Outlier with degree fit = 1
+cubic11     | Outlier with degree fit = 3
+cubic12     | Outlier with degree fit = 3
+cubic14     | Outlier with degree fit = 3
+cubic16     | Outlier with degree fit = 3
+cubic17     | Outlier with degree fit = 3
+cubic18     | Outlier with degree fit = 3
+cubic25     | Outlier with degree fit = 3
+cubic3      | Outlier with degree fit = 3
+cubic5      | Outlier with degree fit = 3
+cubic6      | Outlier with degree fit = 3
+highspeed1  | Outlier with degree fit = 3
+highspeed10 | Outlier with degree fit = 3
+highspeed13 | Outlier with degree fit = 3
+highspeed15 | Outlier with degree fit = 3
+highspeed17 | Outlier with degree fit = 3
+highspeed18 | Outlier with degree fit = 3
+highspeed21 | Outlier with degree fit = 3
+highspeed22 | Outlier with degree fit = 3
+highspeed23 | Outlier with degree fit = 3
+highspeed24 | Outlier with degree fit = 3
+highspeed25 | Outlier with degree fit = 3
+highspeed3  | Outlier with degree fit = 3
+highspeed4  | Outlier with degree fit = 3
+highspeed5  | Outlier with degree fit = 3
+highspeed8  | Outlier with degree fit = 3
+highspeed9  | Outlier with degree fit = 3
+vegas15     | Outlier with degree fit = 3
+vegas21     | Outlier with degree fit = 3
+vegas8      | Outlier with degree fit = 3
+highspeed12 | BIC
+highspeed14 | BIC
+highspeed16 | BIC
+highspeed19 | BIC
+highspeed20 | BIC
+highspeed6  | BIC
+highspeed7  | BIC
+scalable10  | BIC
+scalable12  | BIC
+scalable14  | BIC
+scalable17  | BIC
+scalable19  | YEAH
+scalable21  | BIC
+scalable24  | YEAH
+scalable4   | BIC
+scalable8   | BIC
+westwood22  | BIC
+yeah2       | YEAH
+yeah20      | YEAH
+yeah3       | BIC
+yeah8       | BIC
+dctcp1      | LP
+dctcp10     | HIGHSPEED
+dctcp11     | HIGHSPEED
+dctcp12     | RENO
+dctcp13     | LP
+dctcp14     | HIGHSPEED
+dctcp15     | LP
+dctcp16     | HIGHSPEED
+dctcp17     | LP
+dctcp18     | HIGHSPEED
+dctcp19     | RENO
+dctcp2      | RENO
+dctcp20     | LP
+dctcp21     | RENO
+dctcp22     | RENO
+dctcp23     | RENO
+dctcp24     | RENO
+dctcp25     | LP
+dctcp3      | LP
+dctcp4      | RENO
+dctcp5      | HIGHSPEED
+dctcp6      | HIGHSPEED
+dctcp7      | RENO
+dctcp8      | LP
+dctcp9      | LP
+highspeed11 | WESTWOOD
+lp1         | HIGHSPEED
+lp10        | HIGHSPEED
+lp11        | HIGHSPEED
+lp12        | HIGHSPEED
+lp13        | RENO
+lp14        | LP
+lp15        | RENO
+lp16        | LP
+lp17        | LP
+lp18        | LP
+lp19        | HIGHSPEED
+lp2         | RENO
+lp20        | HIGHSPEED
+lp21        | LP
+lp22        | LP
+lp23        | LP
+lp24        | LP
+lp25        | RENO
+lp3         | LP
+lp4         | LP
+lp5         | LP
+lp6         | RENO
+lp7         | RENO
+lp9         | HIGHSPEED
+reno1       | HIGHSPEED
+reno10      | LP
+reno11      | HIGHSPEED
+reno12      | HIGHSPEED
+reno13      | HIGHSPEED
+reno14      | RENO
+reno15      | LP
+reno16      | LP
+reno17      | HIGHSPEED
+reno18      | LP
+reno19      | LP
+reno2       | HIGHSPEED
+reno20      | HIGHSPEED
+reno21      | RENO
+reno22      | LP
+reno23      | LP
+reno24      | HIGHSPEED
+reno25      | RENO
+reno3       | LP
+reno4       | LP
+reno5       | LP
+reno6       | RENO
+reno7       | RENO
+reno8       | HIGHSPEED
+reno9       | LP
+scalable16  | WESTWOOD
+scalable3   | WESTWOOD
+veno11      | WESTWOOD
+veno12      | WESTWOOD
+veno18      | WESTWOOD
+veno19      | WESTWOOD
+veno22      | WESTWOOD
+veno23      | WESTWOOD
+veno24      | WESTWOOD
+veno5       | HIGHSPEED
+veno8       | WESTWOOD
+westwood1   | RENO
+westwood10  | HIGHSPEED
+westwood11  | RENO
+westwood12  | HIGHSPEED
+westwood13  | RENO
+westwood14  | RENO
+westwood15  | HIGHSPEED
+westwood16  | RENO
+westwood17  | RENO
+westwood18  | DCTCP
+westwood19  | HIGHSPEED
+westwood2   | HIGHSPEED
+westwood20  | RENO
+westwood21  | RENO
+westwood23  | RENO
+westwood24  | RENO
+westwood25  | RENO
+westwood3   | LP
+westwood4   | RENO
+westwood5   | HIGHSPEED
+westwood6   | RENO
+westwood7   | RENO
+westwood8   | HIGHSPEED
+westwood9   | HIGHSPEED
+yeah10      | HIGHSPEED
+yeah14      | HIGHSPEED
+yeah16      | HIGHSPEED
+yeah17      | HIGHSPEED
+yeah19      | HIGHSPEED
+yeah23      | HIGHSPEED
+yeah25      | HIGHSPEED
+yeah4       | HIGHSPEED
+yeah7       | WESTWOOD
+bic10       | CUBIC
+bic12       | CUBIC
+bic13       | CUBIC
+bic14       | CUBIC
+bic15       | CUBIC
+bic16       | CUBIC
+bic17       | CUBIC
+bic18       | CUBIC
+bic19       | CUBIC
+bic21       | CUBIC
+bic24       | CUBIC
+bic25       | CUBIC
+bic3        | CUBIC
+bic8        | CUBIC
+bic9        | CUBIC
+cubic1      | CUBIC
+cubic10     | CUBIC
+cubic13     | CUBIC
+cubic15     | CUBIC
+cubic19     | CUBIC
+cubic2      | CUBIC
+cubic20     | CUBIC
+cubic21     | CUBIC
+cubic22     | CUBIC
+cubic23     | CUBIC
+cubic24     | CUBIC
+cubic4      | CUBIC
+cubic7      | CUBIC
+cubic8      | CUBIC
+cubic9      | CUBIC
+lp8         | VENO
+scalable1   | CUBICQ
+scalable11  | VENO
+scalable18  | VENO
+scalable2   | VENO
+scalable22  | VENO
+scalable23  | CUBICQ
+scalable7   | VENO
+scalable9   | CUBICQ
+veno1       | CUBICQ
+veno10      | VENO
+veno13      | VENO
+veno14      | VENO
+veno15      | CUBICQ
+veno16      | CUBICQ
+veno17      | CUBICQ
+veno2       | VENO
+veno20      | VENO
+veno21      | VENO
+veno25      | VENO
+veno3       | CUBICQ
+veno4       | CUBICQ
+veno6       | VENO
+veno7       | VENO
+veno9       | VENO
+yeah1       | CUBICQ
+yeah12      | VENO
+yeah18      | CUBICQ
+yeah21      | VENO
+yeah24      | VENO
+yeah5       | CUBICQ
