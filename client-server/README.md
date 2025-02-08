@@ -3,7 +3,7 @@
 The folders are named after the following schema: 
 ```
 <PRE>-<POST>-<BANDWIDTH>-<BUFFER>-<HOST>
-```.
+```
 Where `<PRE>`, `<POST>`, `<BANDWIDTH>` and `<BUFFER>` are the parameters for Nebby.
 `<HOST>` is either `pi` or `server` depending on which hardware did the measurment as the client.
 
