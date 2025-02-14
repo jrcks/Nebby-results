@@ -3,6 +3,29 @@ import pandas as pd
 import sys
 from collections import defaultdict
 
+# Mögliche Ergebnisse:
+# Degree 1
+#    1 bic
+#    2 scalable
+#    3 yeah
+# Degree 2
+#    1 dctcp
+#    2 highspeed
+#    3 lp
+#    4 westwood
+#    5 reno
+# Degree 3
+#    1 htcp
+#    2 veno
+#    3 cubic
+#    4 cubicQ
+# Unknown
+#    1 Outlier with degree fit = 1
+#    2 Outlier with degree fit = 2
+#    3 Outlier with degree fit = 3
+# Error
+#    1 Error
+
 if (len(sys.argv) != 2):
     print("Usage: python3 measurement-results.py <results-file>")
     sys.exit(1)
@@ -22,22 +45,49 @@ with open(file, 'r') as f:
             if (actual == "BBR(Maybe)"):
                 actual = "BBR"
             if (actual == "NAN - NO FEATURES"):
-                actual = "Unbekannt"
+                actual = "Error"
             if (actual == "TOO MUCH MSE ERROR"):
-                actual = "Unbekannt"
+                actual = "Error"
             if (actual.startswith("Outlier with degree fit =")):
                 actual = "Unbekannt - Grad " + actual.split(" = ")[1]
+                
+            if (expected == actual):
+                actual = "Korrekt"
 
             results[actual][expected] += 1
+
+# Farben für bestimmte Ergebnisse festlegen
+colors = {
+    'Error': 'red',                  # Rot für 'Error'
+    'Korrekt': 'black',              # Schwarz für 'Korrekt'
+    'Unbekannt - Grad 1': '#FFA07A', # Hellorange für Unbekannt - Grad 1
+    'Unbekannt - Grad 2': '#FF8C00', # Dunkelorange für Unbekannt - Grad 2
+    'Unbekannt - Grad 3': '#FF4500', # Mittelorange für Unbekannt - Grad 3
+    'BBR': '#7570b3',      # Violett
+    'BIC': '#1f77b4',      # Blau
+    'SCALABLE': '#ff7f0e', # Orange
+    'YEAH': '#2ca02c',     # Grün
+    'DCTCP': '#e6ab02',    # Goldgelb
+    'HIGHSPEED': '#9467bd',# Lila
+    'LP': '#8c564b',       # Braun
+    'WESTWOOD': '#e377c2', # Pink
+    'RENO': '#7f7f7f',     # Grau
+    'HTCP': '#bcbd22',     # Olivgrün
+    'VENO': '#17becf',     # Türkis
+    'CUBIC': '#aec7e8',    # Hellblau
+    'CUBICQ': '#1b9e77',   # Blaugrün
+}
 
 df = pd.DataFrame(results).fillna(0)
 df = df.astype(int)
 
-ax = df.plot(kind='bar', stacked=True, figsize=(10, 6))
+color_list = [colors.get(col, 'grey') for col in df.columns]
+
+ax = df.plot(kind='bar', stacked=True, figsize=(10, 6), color=color_list)
 
 plt.xlabel('Wirklicher CCA')
 plt.ylabel('Analyseergebnisse')
-plt.title('Nebby Analyseergebnisse für Kontroll-Messungen')
+plt.title('Nebby Analyseergebnisse für Kontroll-Messungen mit Xms Delay')
 plt.legend(title='Erkannter CCA', bbox_to_anchor=(1,1), loc='upper left')
 plt.xticks(rotation=45)
 plt.tight_layout()
