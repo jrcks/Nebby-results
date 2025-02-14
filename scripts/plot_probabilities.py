@@ -3,6 +3,7 @@ import pickle
 import numpy as np
 from sklearn.naive_bayes import GaussianNB
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
 from typing import Dict
 
 pickle_dir = os.path.dirname(os.path.realpath(__file__)) + "/pickles"
@@ -10,6 +11,10 @@ pickle_dir = os.path.dirname(os.path.realpath(__file__)) + "/pickles"
 scaled_vals: dict = pickle.load(open(pickle_dir + "/scaled_vals.txt","rb"))
 classifiers: dict = pickle.load(open(pickle_dir + "/classifiers.txt","rb"))
 count_to_mp: dict = pickle.load(open(pickle_dir + "/count_to_mp.txt","rb"))
+inverse_count_to_mp = {d: {v: k for k, v in item.items()} for d, item in count_to_mp.items()}
+
+print(inverse_count_to_mp)
+
 degrees = [1,2,3]
 
 class ExtendedResult:
@@ -27,7 +32,7 @@ class ExtendedResult:
     def __str__(self):
         return f"File: {self.file}, BBR: {self.bbr}, Result: {self.result}, Degree: {self.degree}, Coeff: {self.degree_coeff}, Error: {self.degree_error}"
 
-results: Dict[str, ExtendedResult] = pickle.load(open(pickle_dir + "/a_results_extended.txt","rb"))
+results: Dict[str, ExtendedResult] = pickle.load(open("../../Nebby/analysis" + "/a_results_extended.txt","rb"))
 
 for degree in degrees:
     # TODO: Data and Probs für Outliers
@@ -38,6 +43,7 @@ for degree in degrees:
         continue
     
     data = [res.data for res in results_with_degree]
+    data = np.array(data)
     labels = [res.label for res in results_with_degree]
     
     clf: GaussianNB = classifiers[degree]
@@ -49,8 +55,6 @@ for degree in degrees:
         xx, yy = np.meshgrid(x, y)
         X_2d = np.c_[xx.ravel(), yy.ravel()]
         
-        data = np.array(data)
-
         # Vorhersage der Klassen
         preds = clf.predict(X_2d)
         preds = preds.reshape(xx.shape)
@@ -62,10 +66,10 @@ for degree in degrees:
 
         # Erstelle eine Farbkarte
         cmap = plt.get_cmap('RdBu', len(unique_preds))
-
-        plt.figure(figsize=(10, 8))
+    
+        fig, ax = plt.subplots(figsize=(10, 8))
         # Konturplot für die Klassen
-        contour = plt.contourf(xx, yy, colors, levels=np.arange(len(unique_preds) + 1) - 0.5, cmap=cmap, alpha=0.7)
+        contour = ax.contourf(xx, yy, colors, levels=np.arange(len(unique_preds) + 1) - 0.5, cmap=cmap, alpha=0.7)
 
         # group the data by the labels/filenames (actual CCAs)
         grouped_data = {}
@@ -75,20 +79,36 @@ for degree in degrees:
                 grouped_data[actual] = []
             grouped_data[actual].append(data[i])
 
+        outliers = []
+
         # Scatterplot der Datenpunkte
         for cca in grouped_data:
             grouped_data[cca] = np.array(grouped_data[cca])
-            # TODO: Color
-            color = 'black'
-            plt.scatter(grouped_data[cca][:, 0], grouped_data[cca][:, 1], s=5, alpha=1, color=color, label=cca.upper())
+            # Farben für CCAs festlegen
+            if (cca.lower() not in inverse_count_to_mp[degree]):
+                color = 'black'
+                outliers.append(cca)
+            else:
+                pred_id = inverse_count_to_mp[degree][cca.lower()]
+                color = cmap(color_map[pred_id])
+            ax.scatter(grouped_data[cca][:, 0], grouped_data[cca][:, 1], s=40, color=color, edgecolors='black')#, label=cca.upper())
         
-        plt.title('Degree 2 Clustering')
-
-        # Platz für die Namenslegende erstellen
+        ax.set_title('Degree 2 Clustering')
+        
+        # Legende befüllen
         for pred_id in unique_preds:
-            plt.scatter([], [], label=count_to_mp[degree][pred_id].upper(), color=cmap(color_map[pred_id]))
-            
-        plt.legend(title='CCAs')
-        plt.xlabel('c')
-        plt.ylabel('b')
+            ax.scatter([], [], label=count_to_mp[degree][pred_id].upper(), color=cmap(color_map[pred_id]))
+    
+        if (len(outliers) > 0):
+            str_outliers = "Wrong Degree: " + ', '.join(outliers)
+            ax.scatter([], [], label=str_outliers.upper(), color='black')
+                
+        ax.legend(title='CCAs')
+        ax.set_xlabel('c')
+        ax.set_ylabel('b')
+        
+        # Fokus auf den Kernbereich
+        ax.set_xlim(left=-3.5, right=3.5)
+        ax.set_ylim(ymin=-3.5, ymax=3.5)
+        
         plt.show()
