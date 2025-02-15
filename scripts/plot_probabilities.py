@@ -2,6 +2,7 @@ import os
 import pickle
 import numpy as np
 from sklearn.naive_bayes import GaussianNB
+from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from typing import Dict
@@ -13,9 +14,9 @@ classifiers: dict = pickle.load(open(pickle_dir + "/classifiers.txt","rb"))
 count_to_mp: dict = pickle.load(open(pickle_dir + "/count_to_mp.txt","rb"))
 inverse_count_to_mp = {d: {v: k for k, v in item.items()} for d, item in count_to_mp.items()}
 
-print(inverse_count_to_mp)
-
 degrees = [1,2,3]
+
+coeffs_instead_of_scaled = False
 
 class ExtendedResult:
     def __init__(self):
@@ -42,7 +43,11 @@ for degree in degrees:
         print("No data for degree", degree)
         continue
     
-    data = [res.data for res in results_with_degree]
+    if coeffs_instead_of_scaled:
+        data = [res.degree_coeff[0:degree] for res in results_with_degree]
+    else:
+        data = [res.data for res in results_with_degree]
+    
     data = np.array(data)
     labels = [res.label for res in results_with_degree]
     
@@ -56,9 +61,10 @@ for degree in degrees:
 
         fig, ax = plt.subplots(figsize=(10, 8))
         # Plotte die Wahrscheinlichkeiten der Klassen
-        ax.plot(X_1d, probs[:, 0], color='blue', label=f'{count_to_mp[degree][1].upper()}', lw=2) # bic
-        ax.plot(X_1d, probs[:, 1], color='red', label=f'{count_to_mp[degree][2].upper()}', lw=2) # scalable
-        ax.plot(X_1d, probs[:, 2], color='green', label=f'{count_to_mp[degree][3].upper()}', lw=2) # yeah
+        if not coeffs_instead_of_scaled:
+            ax.plot(X_1d, probs[:, 0], color='blue', label=f'{count_to_mp[degree][1].upper()}', lw=2) # bic
+            ax.plot(X_1d, probs[:, 1], color='red', label=f'{count_to_mp[degree][2].upper()}', lw=2) # scalable
+            ax.plot(X_1d, probs[:, 2], color='green', label=f'{count_to_mp[degree][3].upper()}', lw=2) # yeah
 
         # group the data by the labels/filenames (actual CCAs)
         grouped_data = {}
@@ -118,7 +124,8 @@ for degree in degrees:
     
         fig, ax = plt.subplots(figsize=(10, 8))
         # Konturplot für die Klassen
-        contour = ax.contourf(xx, yy, colors, levels=np.arange(len(unique_preds) + 1) - 0.5, cmap=cmap, alpha=0.7)
+        if not coeffs_instead_of_scaled:
+            contour = ax.contourf(xx, yy, colors, levels=np.arange(len(unique_preds) + 1) - 0.5, cmap=cmap, alpha=0.7)
 
         # group the data by the labels/filenames (actual CCAs)
         grouped_data = {}
