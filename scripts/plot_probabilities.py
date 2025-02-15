@@ -48,6 +48,55 @@ for degree in degrees:
     
     clf: GaussianNB = classifiers[degree]
     
+    if degree == 1:
+        # Beispiel für 1D-Daten
+        X_1d = np.linspace(-3, 3, 100).reshape(-1, 1)  # 100 Punkte zwischen -3 und 3
+        #pred = classifiers[1].predict(X_1d)
+        probs = classifiers[1].predict_proba(X_1d)
+
+        fig, ax = plt.subplots(figsize=(10, 8))
+        # Plotte die Wahrscheinlichkeiten der Klassen
+        ax.plot(X_1d, probs[:, 0], color='blue', label=f'{count_to_mp[degree][1].upper()}', lw=2) # bic
+        ax.plot(X_1d, probs[:, 1], color='red', label=f'{count_to_mp[degree][2].upper()}', lw=2) # scalable
+        ax.plot(X_1d, probs[:, 2], color='green', label=f'{count_to_mp[degree][3].upper()}', lw=2) # yeah
+
+        # group the data by the labels/filenames (actual CCAs)
+        grouped_data = {}
+        for i in range(len(labels)):
+            actual = labels[i].rstrip().rstrip('0123456789')
+            if actual not in grouped_data:
+                grouped_data[actual] = []
+            grouped_data[actual].append(data[i])
+
+        outliers = []
+
+        # Scatterplot der Datenpunkte
+        for cca in grouped_data:
+            grouped_data[cca] = np.array(grouped_data[cca])
+            # Farben für CCAs festlegen
+            if (cca.lower() not in inverse_count_to_mp[degree]):
+                color = 'black'
+                outliers.append(cca)
+            else:
+                pred_id = inverse_count_to_mp[degree][cca.lower()]
+                if (pred_id == 1):
+                    color = 'blue'
+                elif (pred_id == 2):
+                    color = 'red'
+                elif (pred_id == 3):
+                    color = 'green'
+                else:
+                    color = 'black'
+            print("Scatter", cca, color)
+            ax.scatter(grouped_data[cca], [0.5 for i in range(0, len(grouped_data[cca][:,0]))], s=40, color=color, edgecolors='black')
+        
+        ax.set_title('Degree 1 Clustering')
+        ax.set_xlabel('c')
+        ax.set_ylabel('Probability')
+        ax.legend()
+        ax.grid()
+        plt.show()
+    
     if degree == 2:
         # Erstellen von 2D-Daten
         x = np.linspace(-3, 3, 100)
