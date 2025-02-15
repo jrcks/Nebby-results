@@ -40,6 +40,14 @@ with open(file, 'r') as f:
             expected: str = measurement[0].strip().rstrip('0123456789').upper()
             actual: str = measurement[1].strip()
             
+            # Add degree to expected label
+            if (expected in ["BIC", "SCALABLE", "YEAH", "VEGAS"]):
+                expected += " (1)"
+            if (expected in ["DCTCP", "HIGHSPEED", "LP", "WESTWOOD", "RENO"]):
+                expected += " (2)"
+            if (expected in ["HTCP", "VENO", "CUBIC", "CUBICQ"]):
+                expected += " (3)"
+            
             # Ignore BBR
             if (expected == "BBR"):
                 continue
@@ -48,9 +56,9 @@ with open(file, 'r') as f:
                 actual = measurement[2].strip().upper()
             
             if (actual == "NAN - NO FEATURES"):
-                actual = "Error"
+                actual = "Error - Features"
             if (actual == "TOO MUCH MSE ERROR"):
-                actual = "Error"
+                actual = "Error - MSE"
             if (actual.startswith("Outlier with degree fit =")):
                 actual = "Degree " + actual.split(" = ")[1].strip()
             
@@ -60,26 +68,20 @@ with open(file, 'r') as f:
                 actual = "Degree 2"
             if (actual in ["HTCP", "VENO", "CUBIC", "CUBICQ"]):
                 actual = "Degree 3"
-            
-            if (expected in ["BIC", "SCALABLE", "YEAH", "VEGAS"]):
-                expected += " (1)"
-            if (expected in ["DCTCP", "HIGHSPEED", "LP", "WESTWOOD", "RENO"]):
-                expected += " (2)"
-            if (expected in ["HTCP", "VENO", "CUBIC", "CUBICQ"]):
-                expected += " (3)"
 
-            if (actual[-1] in expected and actual != "BBR"):
+            if (actual[-1].isnumeric() and actual[-1] in expected):
                 actual = "Korrekt"
             
             results[actual][expected] += 1
 
 # Farben für bestimmte Ergebnisse festlegen
 colors = {
-    'Error': 'red',        # Rot
+    'Error - Features': 'red',        # Rot
+    'Error - MSE': 'orange',        # Orange
     'Korrekt': 'black',    # Grün
     'BBR': '#7f7f7f',      # Grau
     'Degree 1': '#1f77b4', # Blau
-    'Degree 2': '#ff7f0e', # Orange
+    'Degree 2': 'green',   # Orange
     'Degree 3': '#9467bd'  # Lila
 }
 
@@ -89,7 +91,7 @@ df = df.astype(int)
 # Sortiere rows alphabetisch
 df = df.sort_index()
 
-color_list = [colors.get(col, 'black') for col in df.columns]
+color_list = [colors.get(col, 'yellow') for col in df.columns]
 
 ax = df.plot(kind='bar', stacked=True, figsize=(10, 6), color=color_list)
 
@@ -103,7 +105,8 @@ plt.tight_layout()
 # Berechnen der Anzahl der korrekten Ergebnisse
 correct = 0
 bbr = 0
-error = 0
+error_feat = 0
+error_mse = 0
 false = 0
 
 
@@ -115,18 +118,22 @@ for actual in results:
             correct += results[actual][expected]
         elif (actual == "BBR"):
             bbr += results[actual][expected]
-        elif (actual == "Error"):
-            error += results[actual][expected]
+        elif (actual == "Error - Features"):
+            error_feat += results[actual][expected]
+        elif (actual == "Error - MSE"):
+            error_mse += results[actual][expected]
         else:
             false += results[actual][expected]
 
-total = correct + bbr + error + false
+total = correct + bbr + error_feat + false
 print("Ergebnisse:", total)
 print("Korrekt: ", correct, " (", correct/total * 100, "%)", sep="")
-print("Korrekt ohne BBR und Error: ", correct, " (", correct/(total - bbr - error) * 100, "%)", sep="")
+print("Korrekt ohne BBR und Error: ", correct, " (", correct/(total - bbr - error_feat) * 100, "%)", sep="")
 print("BBR: ", bbr, " (", bbr/total * 100, "%)", sep="")
-print("Error: ", error, " (", error/total * 100, "%)", sep="")
+print("Error-Feat: ", error_feat, " (", error_feat/total * 100, "%)", sep="")
+print("Error-MSE: ", error_mse, " (", error_mse/total * 100, "%)", sep="")
+print("Error-MSE ohne BBR und Error: ", error_mse, " (", error_mse/(total - bbr - error_feat) * 100, "%)", sep="")
 print("Falsch: ", false, " (", false/total * 100, "%)", sep="")
-print("Falsch ohne BBR und Error: ", false, " (", false/(total - bbr - error) * 100, "%)", sep="")
+print("Falsch ohne BBR und Error: ", false, " (", false/(total - bbr - error_feat) * 100, "%)", sep="")
 
 plt.show()
