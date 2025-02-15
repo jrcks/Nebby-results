@@ -40,8 +40,13 @@ with open(file, 'r') as f:
             expected: str = measurement[0].strip().rstrip('0123456789').upper()
             actual: str = measurement[1].strip()
             
+            # Ignore BBR
+            if (expected == "BBR"):
+                continue
+            # Ignore BBR(Maybe) and use the "normally" detected CCA
             if (actual == "BBR(Maybe)"):
-                actual = "BBR"
+                actual = measurement[2].strip().upper()
+            
             if (actual == "NAN - NO FEATURES"):
                 actual = "Error"
             if (actual == "TOO MUCH MSE ERROR"):
@@ -94,5 +99,34 @@ plt.title('Nebby Grad-Analyseergebnisse für Kontroll-Messungen')
 plt.legend(title='Erkannter Grad', bbox_to_anchor=(1,1), loc='upper left')
 plt.xticks(rotation=45)
 plt.tight_layout()
+
+# Berechnen der Anzahl der korrekten Ergebnisse
+correct = 0
+bbr = 0
+error = 0
+false = 0
+
+
+for actual in results:
+    for expected in results[actual]:
+        if expected == "BBR":
+            continue
+        if (actual == "Korrekt"):
+            correct += results[actual][expected]
+        elif (actual == "BBR"):
+            bbr += results[actual][expected]
+        elif (actual == "Error"):
+            error += results[actual][expected]
+        else:
+            false += results[actual][expected]
+
+total = correct + bbr + error + false
+print("Ergebnisse:", total)
+print("Korrekt: ", correct, " (", correct/total * 100, "%)", sep="")
+print("Korrekt ohne BBR und Error: ", correct, " (", correct/(total - bbr - error) * 100, "%)", sep="")
+print("BBR: ", bbr, " (", bbr/total * 100, "%)", sep="")
+print("Error: ", error, " (", error/total * 100, "%)", sep="")
+print("Falsch: ", false, " (", false/total * 100, "%)", sep="")
+print("Falsch ohne BBR und Error: ", false, " (", false/(total - bbr - error) * 100, "%)", sep="")
 
 plt.show()
