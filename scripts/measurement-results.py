@@ -81,13 +81,16 @@ colors = {
 df = pd.DataFrame(results).fillna(0)
 df = df.astype(int)
 
+# Sortiere rows alphabetisch
+df = df.sort_index()
+
 color_list = [colors.get(col, 'grey') for col in df.columns]
 
 ax = df.plot(kind='bar', stacked=True, figsize=(10, 6), color=color_list)
 
 plt.xlabel('Wirklicher CCA')
 plt.ylabel('Analyseergebnisse')
-plt.title('Nebby Analyseergebnisse für Kontroll-Messungen mit Xms Delay')
+plt.title('Nebby Analyseergebnisse für Kontroll-Messungen')
 plt.legend(title='Erkannter CCA', bbox_to_anchor=(1,1), loc='upper left')
 plt.xticks(rotation=45)
 plt.tight_layout()
