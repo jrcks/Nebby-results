@@ -95,4 +95,28 @@ plt.legend(title='Erkannter CCA', bbox_to_anchor=(1,1), loc='upper left')
 plt.xticks(rotation=45)
 plt.tight_layout()
 
+
+# Berechnen der Anzahl der korrekten Ergebnisse
+correct = 0
+error = 0
+false = 0
+
+for actual in results:
+    for expected in results[actual]:
+        if (actual == "Korrekt"):
+            correct += results[actual][expected]
+        elif ("Error" in actual):
+            error += results[actual][expected]
+        else:
+            false += results[actual][expected]
+
+total = correct + error + false
+
+print(f"Total: {total}")
+print(f"Correct: {correct} ({correct / total * 100:.2f}%)")
+print(f"Correct without Error: {correct} ({correct / (total - error) * 100:.2f}%)")
+print(f"Error: {error} ({error / total * 100:.2f}%)")
+print(f"False: {false} ({false / total * 100:.2f}%)")
+print(f"False without Error: {false} ({false / (total - error) * 100:.2f}%)")
+
 plt.show()
