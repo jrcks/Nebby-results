@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import sys
+import sys, os
 from collections import defaultdict
 
 # Mögliche Ergebnisse:
@@ -33,6 +33,11 @@ if (len(sys.argv) != 2):
 file = sys.argv[1]
 results = defaultdict(lambda: defaultdict(int))
 
+print_plot = True
+
+if print_plot and not os.path.exists("plots"):
+    os.makedirs("plots")
+
 with open(file, 'r') as f:
     for line in f:
         measurement = line.split(' | ')
@@ -59,7 +64,7 @@ with open(file, 'r') as f:
                 actual = "Error - Features"
             if (actual == "TOO MUCH MSE ERROR"):
                 actual = "Error - MSE"
-            if (actual.startswith("Outlier with degree fit =")):
+            if (actual.startswith("Outlier with degree fit =") or actual.startswith("Outlier with degree fit =".upper())):
                 actual = "Degree " + actual.split(" = ")[1].strip()
             
             if (actual in ["BIC", "SCALABLE", "YEAH"]):
@@ -136,4 +141,8 @@ print("Error-MSE ohne BBR und Error: ", error_mse, " (", error_mse/(total - bbr 
 print("Falsch: ", false, " (", false/total * 100, "%)", sep="")
 print("Falsch ohne BBR und Error: ", false, " (", false/(total - bbr - error_feat) * 100, "%)", sep="")
 
-plt.show()
+if print_plot:
+    plt.savefig(f"plots/degrees.png")
+else:
+    plt.show()
+plt.close()

@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import sys
+import sys, os
 from collections import defaultdict
 
 # Mögliche Ergebnisse:
@@ -32,6 +32,11 @@ if (len(sys.argv) != 2):
 
 file = sys.argv[1]
 results = defaultdict(lambda: defaultdict(int))
+
+print_plot = True
+
+if print_plot and not os.path.exists("plots"):
+    os.makedirs("plots")
 
 with open(file, 'r') as f:
     for line in f:
@@ -117,4 +122,8 @@ print(f"Error: {error} ({error / total * 100:.2f}%)")
 print(f"False: {false} ({false / total * 100:.2f}%)")
 print(f"False without Error: {false} ({false / (total - error) * 100:.2f}%)")
 
-plt.show()
+if print_plot:
+    plt.savefig(f"plots/results.png")
+else:
+    plt.show()
+plt.close()

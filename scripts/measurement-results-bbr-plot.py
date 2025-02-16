@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import sys
+import sys, os
 from collections import defaultdict
 
 # Mögliche Ergebnisse:
@@ -32,6 +32,11 @@ if (len(sys.argv) != 2):
 
 file = sys.argv[1]
 results = defaultdict(lambda: defaultdict(int))
+
+print_plot = True
+
+if print_plot and not os.path.exists("plots"):
+    os.makedirs("plots")
 
 with open(file, 'r') as f:
     for line in f:
@@ -69,4 +74,8 @@ plt.legend(title='Erkannter CCA', bbox_to_anchor=(1,1), loc='upper left')
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-plt.show()
+if print_plot:
+    plt.savefig(f"plots/bbr.png")
+else:
+    plt.show()
+plt.close()

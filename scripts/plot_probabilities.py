@@ -13,6 +13,11 @@ if (len(sys.argv) != 2):
 
 file = sys.argv[1]
 
+print_plot = False
+
+if print_plot and not os.path.exists("plots"):
+    os.makedirs("plots")
+
 pickle_dir = os.path.dirname(os.path.realpath(__file__)) + "/pickles"
 
 scaled_vals: dict = pickle.load(open(pickle_dir + "/scaled_vals.txt","rb"))
@@ -173,4 +178,9 @@ for degree in degrees:
         ax.set_xlim(left=-3.5, right=3.5)
         ax.set_ylim(ymin=-3.5, ymax=3.5)
         
-        plt.show()
+        if print_plot:
+            plt.savefig(f"plots/probabilities-D{degree}.png")
+        else:
+            plt.show()
+        plt.close(fig)
+        
