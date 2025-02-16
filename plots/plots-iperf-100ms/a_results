@@ -1,0 +1,650 @@
+bbr11       | BBR
+bbr12       | BBR
+bbr14       | BBR
+bbr21       | BBR
+bbr22       | BBR
+bbr24       | BBR
+bbr29       | BBR
+bbr3        | BBR
+bbr30       | BBR
+bbr49       | BBR
+bbr1        | BBR(Maybe) | WESTWOOD
+bbr18       | BBR(Maybe) | CUBIC
+bbr25       | BBR(Maybe) | CUBIC
+bbr27       | BBR(Maybe) | VENO
+bbr28       | BBR(Maybe) | CUBIC
+bbr35       | BBR(Maybe) | VENO
+bbr37       | BBR(Maybe) | TOO MUCH MSE ERROR
+bbr38       | BBR(Maybe) | Outlier with degree fit = 3
+bbr41       | BBR(Maybe) | TOO MUCH MSE ERROR
+bbr44       | BBR(Maybe) | CUBIC
+bbr48       | BBR(Maybe) | CUBIC
+bbr5        | BBR(Maybe) | CUBIC
+bbr50       | BBR(Maybe) | Outlier with degree fit = 3
+bbr7        | BBR(Maybe) | Outlier with degree fit = 3
+bbr8        | BBR(Maybe) | TOO MUCH MSE ERROR
+bbr15       | NAN - NO FEATURES
+bbr16       | NAN - NO FEATURES
+bbr19       | NAN - NO FEATURES
+bbr4        | NAN - NO FEATURES
+bbr47       | NAN - NO FEATURES
+bic1        | NAN - NO FEATURES
+bic10       | NAN - NO FEATURES
+bic11       | NAN - NO FEATURES
+bic12       | NAN - NO FEATURES
+bic13       | NAN - NO FEATURES
+bic14       | NAN - NO FEATURES
+bic15       | NAN - NO FEATURES
+bic16       | NAN - NO FEATURES
+bic17       | NAN - NO FEATURES
+bic18       | NAN - NO FEATURES
+bic19       | NAN - NO FEATURES
+bic2        | NAN - NO FEATURES
+bic20       | NAN - NO FEATURES
+bic21       | NAN - NO FEATURES
+bic22       | NAN - NO FEATURES
+bic23       | NAN - NO FEATURES
+bic24       | NAN - NO FEATURES
+bic25       | NAN - NO FEATURES
+bic26       | NAN - NO FEATURES
+bic27       | NAN - NO FEATURES
+bic28       | NAN - NO FEATURES
+bic29       | NAN - NO FEATURES
+bic3        | NAN - NO FEATURES
+bic30       | NAN - NO FEATURES
+bic31       | NAN - NO FEATURES
+bic32       | NAN - NO FEATURES
+bic33       | NAN - NO FEATURES
+bic34       | NAN - NO FEATURES
+bic35       | NAN - NO FEATURES
+bic36       | NAN - NO FEATURES
+bic37       | NAN - NO FEATURES
+bic38       | NAN - NO FEATURES
+bic39       | NAN - NO FEATURES
+bic4        | NAN - NO FEATURES
+bic40       | NAN - NO FEATURES
+bic41       | NAN - NO FEATURES
+bic42       | NAN - NO FEATURES
+bic43       | NAN - NO FEATURES
+bic44       | NAN - NO FEATURES
+bic45       | NAN - NO FEATURES
+bic46       | NAN - NO FEATURES
+bic47       | NAN - NO FEATURES
+bic48       | NAN - NO FEATURES
+bic49       | NAN - NO FEATURES
+bic5        | NAN - NO FEATURES
+bic50       | NAN - NO FEATURES
+bic6        | NAN - NO FEATURES
+bic7        | NAN - NO FEATURES
+bic8        | NAN - NO FEATURES
+bic9        | NAN - NO FEATURES
+cubic1      | NAN - NO FEATURES
+cubic10     | NAN - NO FEATURES
+cubic12     | NAN - NO FEATURES
+cubic13     | NAN - NO FEATURES
+cubic14     | NAN - NO FEATURES
+cubic15     | NAN - NO FEATURES
+cubic16     | NAN - NO FEATURES
+cubic17     | NAN - NO FEATURES
+cubic18     | NAN - NO FEATURES
+cubic21     | NAN - NO FEATURES
+cubic22     | NAN - NO FEATURES
+cubic23     | NAN - NO FEATURES
+cubic24     | NAN - NO FEATURES
+cubic26     | NAN - NO FEATURES
+cubic27     | NAN - NO FEATURES
+cubic28     | NAN - NO FEATURES
+cubic29     | NAN - NO FEATURES
+cubic3      | NAN - NO FEATURES
+cubic30     | NAN - NO FEATURES
+cubic32     | NAN - NO FEATURES
+cubic34     | NAN - NO FEATURES
+cubic36     | NAN - NO FEATURES
+cubic37     | NAN - NO FEATURES
+cubic38     | NAN - NO FEATURES
+cubic39     | NAN - NO FEATURES
+cubic40     | NAN - NO FEATURES
+cubic41     | NAN - NO FEATURES
+cubic42     | NAN - NO FEATURES
+cubic43     | NAN - NO FEATURES
+cubic45     | NAN - NO FEATURES
+cubic46     | NAN - NO FEATURES
+cubic47     | NAN - NO FEATURES
+cubic48     | NAN - NO FEATURES
+cubic49     | NAN - NO FEATURES
+cubic50     | NAN - NO FEATURES
+cubic6      | NAN - NO FEATURES
+cubic7      | NAN - NO FEATURES
+cubic8      | NAN - NO FEATURES
+cubic9      | NAN - NO FEATURES
+dctcp18     | NAN - NO FEATURES
+dctcp25     | NAN - NO FEATURES
+dctcp30     | NAN - NO FEATURES
+dctcp34     | NAN - NO FEATURES
+highspeed30 | NAN - NO FEATURES
+highspeed32 | NAN - NO FEATURES
+highspeed50 | NAN - NO FEATURES
+htcp1       | NAN - NO FEATURES
+htcp10      | NAN - NO FEATURES
+htcp11      | NAN - NO FEATURES
+htcp12      | NAN - NO FEATURES
+htcp13      | NAN - NO FEATURES
+htcp14      | NAN - NO FEATURES
+htcp15      | NAN - NO FEATURES
+htcp16      | NAN - NO FEATURES
+htcp17      | NAN - NO FEATURES
+htcp18      | NAN - NO FEATURES
+htcp19      | NAN - NO FEATURES
+htcp2       | NAN - NO FEATURES
+htcp20      | NAN - NO FEATURES
+htcp21      | NAN - NO FEATURES
+htcp22      | NAN - NO FEATURES
+htcp23      | NAN - NO FEATURES
+htcp24      | NAN - NO FEATURES
+htcp25      | NAN - NO FEATURES
+htcp26      | NAN - NO FEATURES
+htcp27      | NAN - NO FEATURES
+htcp28      | NAN - NO FEATURES
+htcp29      | NAN - NO FEATURES
+htcp3       | NAN - NO FEATURES
+htcp30      | NAN - NO FEATURES
+htcp31      | NAN - NO FEATURES
+htcp32      | NAN - NO FEATURES
+htcp33      | NAN - NO FEATURES
+htcp34      | NAN - NO FEATURES
+htcp35      | NAN - NO FEATURES
+htcp36      | NAN - NO FEATURES
+htcp37      | NAN - NO FEATURES
+htcp38      | NAN - NO FEATURES
+htcp39      | NAN - NO FEATURES
+htcp4       | NAN - NO FEATURES
+htcp40      | NAN - NO FEATURES
+htcp41      | NAN - NO FEATURES
+htcp42      | NAN - NO FEATURES
+htcp43      | NAN - NO FEATURES
+htcp44      | NAN - NO FEATURES
+htcp45      | NAN - NO FEATURES
+htcp46      | NAN - NO FEATURES
+htcp47      | NAN - NO FEATURES
+htcp48      | NAN - NO FEATURES
+htcp49      | NAN - NO FEATURES
+htcp5       | NAN - NO FEATURES
+htcp50      | NAN - NO FEATURES
+htcp6       | NAN - NO FEATURES
+htcp7       | NAN - NO FEATURES
+htcp8       | NAN - NO FEATURES
+htcp9       | NAN - NO FEATURES
+lp12        | NAN - NO FEATURES
+lp7         | NAN - NO FEATURES
+scalable1   | NAN - NO FEATURES
+scalable10  | NAN - NO FEATURES
+scalable11  | NAN - NO FEATURES
+scalable12  | NAN - NO FEATURES
+scalable13  | NAN - NO FEATURES
+scalable14  | NAN - NO FEATURES
+scalable15  | NAN - NO FEATURES
+scalable16  | NAN - NO FEATURES
+scalable17  | NAN - NO FEATURES
+scalable18  | NAN - NO FEATURES
+scalable19  | NAN - NO FEATURES
+scalable2   | NAN - NO FEATURES
+scalable20  | NAN - NO FEATURES
+scalable21  | NAN - NO FEATURES
+scalable22  | NAN - NO FEATURES
+scalable23  | NAN - NO FEATURES
+scalable24  | NAN - NO FEATURES
+scalable25  | NAN - NO FEATURES
+scalable26  | NAN - NO FEATURES
+scalable27  | NAN - NO FEATURES
+scalable28  | NAN - NO FEATURES
+scalable29  | NAN - NO FEATURES
+scalable3   | NAN - NO FEATURES
+scalable30  | NAN - NO FEATURES
+scalable31  | NAN - NO FEATURES
+scalable32  | NAN - NO FEATURES
+scalable33  | NAN - NO FEATURES
+scalable34  | NAN - NO FEATURES
+scalable35  | NAN - NO FEATURES
+scalable36  | NAN - NO FEATURES
+scalable37  | NAN - NO FEATURES
+scalable38  | NAN - NO FEATURES
+scalable39  | NAN - NO FEATURES
+scalable4   | NAN - NO FEATURES
+scalable40  | NAN - NO FEATURES
+scalable41  | NAN - NO FEATURES
+scalable42  | NAN - NO FEATURES
+scalable43  | NAN - NO FEATURES
+scalable44  | NAN - NO FEATURES
+scalable45  | NAN - NO FEATURES
+scalable46  | NAN - NO FEATURES
+scalable47  | NAN - NO FEATURES
+scalable48  | NAN - NO FEATURES
+scalable49  | NAN - NO FEATURES
+scalable5   | NAN - NO FEATURES
+scalable50  | NAN - NO FEATURES
+scalable6   | NAN - NO FEATURES
+scalable7   | NAN - NO FEATURES
+scalable8   | NAN - NO FEATURES
+scalable9   | NAN - NO FEATURES
+vegas26     | NAN - NO FEATURES
+veno12      | NAN - NO FEATURES
+veno19      | NAN - NO FEATURES
+veno22      | NAN - NO FEATURES
+veno24      | NAN - NO FEATURES
+veno33      | NAN - NO FEATURES
+veno39      | NAN - NO FEATURES
+veno4       | NAN - NO FEATURES
+veno48      | NAN - NO FEATURES
+yeah1       | NAN - NO FEATURES
+yeah10      | NAN - NO FEATURES
+yeah11      | NAN - NO FEATURES
+yeah12      | NAN - NO FEATURES
+yeah13      | NAN - NO FEATURES
+yeah14      | NAN - NO FEATURES
+yeah15      | NAN - NO FEATURES
+yeah16      | NAN - NO FEATURES
+yeah17      | NAN - NO FEATURES
+yeah18      | NAN - NO FEATURES
+yeah19      | NAN - NO FEATURES
+yeah2       | NAN - NO FEATURES
+yeah20      | NAN - NO FEATURES
+yeah21      | NAN - NO FEATURES
+yeah22      | NAN - NO FEATURES
+yeah23      | NAN - NO FEATURES
+yeah24      | NAN - NO FEATURES
+yeah25      | NAN - NO FEATURES
+yeah26      | NAN - NO FEATURES
+yeah27      | NAN - NO FEATURES
+yeah28      | NAN - NO FEATURES
+yeah29      | NAN - NO FEATURES
+yeah3       | NAN - NO FEATURES
+yeah30      | NAN - NO FEATURES
+yeah31      | NAN - NO FEATURES
+yeah32      | NAN - NO FEATURES
+yeah33      | NAN - NO FEATURES
+yeah34      | NAN - NO FEATURES
+yeah35      | NAN - NO FEATURES
+yeah36      | NAN - NO FEATURES
+yeah37      | NAN - NO FEATURES
+yeah38      | NAN - NO FEATURES
+yeah39      | NAN - NO FEATURES
+yeah4       | NAN - NO FEATURES
+yeah40      | NAN - NO FEATURES
+yeah41      | NAN - NO FEATURES
+yeah42      | NAN - NO FEATURES
+yeah43      | NAN - NO FEATURES
+yeah44      | NAN - NO FEATURES
+yeah45      | NAN - NO FEATURES
+yeah46      | NAN - NO FEATURES
+yeah47      | NAN - NO FEATURES
+yeah48      | NAN - NO FEATURES
+yeah49      | NAN - NO FEATURES
+yeah5       | NAN - NO FEATURES
+yeah50      | NAN - NO FEATURES
+yeah6       | NAN - NO FEATURES
+yeah7       | NAN - NO FEATURES
+yeah8       | NAN - NO FEATURES
+yeah9       | NAN - NO FEATURES
+bbr20       | TOO MUCH MSE ERROR
+bbr31       | TOO MUCH MSE ERROR
+bbr6        | TOO MUCH MSE ERROR
+bbr9        | TOO MUCH MSE ERROR
+highspeed1  | TOO MUCH MSE ERROR
+highspeed10 | TOO MUCH MSE ERROR
+highspeed11 | TOO MUCH MSE ERROR
+highspeed13 | TOO MUCH MSE ERROR
+highspeed14 | TOO MUCH MSE ERROR
+highspeed15 | TOO MUCH MSE ERROR
+highspeed18 | TOO MUCH MSE ERROR
+highspeed19 | TOO MUCH MSE ERROR
+highspeed26 | TOO MUCH MSE ERROR
+highspeed27 | TOO MUCH MSE ERROR
+highspeed28 | TOO MUCH MSE ERROR
+highspeed33 | TOO MUCH MSE ERROR
+highspeed35 | TOO MUCH MSE ERROR
+highspeed38 | TOO MUCH MSE ERROR
+highspeed5  | TOO MUCH MSE ERROR
+vegas1      | TOO MUCH MSE ERROR
+vegas11     | TOO MUCH MSE ERROR
+vegas12     | TOO MUCH MSE ERROR
+vegas13     | TOO MUCH MSE ERROR
+vegas14     | TOO MUCH MSE ERROR
+vegas15     | TOO MUCH MSE ERROR
+vegas16     | TOO MUCH MSE ERROR
+vegas17     | TOO MUCH MSE ERROR
+vegas18     | TOO MUCH MSE ERROR
+vegas19     | TOO MUCH MSE ERROR
+vegas2      | TOO MUCH MSE ERROR
+vegas20     | TOO MUCH MSE ERROR
+vegas21     | TOO MUCH MSE ERROR
+vegas22     | TOO MUCH MSE ERROR
+vegas24     | TOO MUCH MSE ERROR
+vegas25     | TOO MUCH MSE ERROR
+vegas27     | TOO MUCH MSE ERROR
+vegas28     | TOO MUCH MSE ERROR
+vegas29     | TOO MUCH MSE ERROR
+vegas3      | TOO MUCH MSE ERROR
+vegas30     | TOO MUCH MSE ERROR
+vegas31     | TOO MUCH MSE ERROR
+vegas32     | TOO MUCH MSE ERROR
+vegas33     | TOO MUCH MSE ERROR
+vegas34     | TOO MUCH MSE ERROR
+vegas35     | TOO MUCH MSE ERROR
+vegas36     | TOO MUCH MSE ERROR
+vegas37     | TOO MUCH MSE ERROR
+vegas38     | TOO MUCH MSE ERROR
+vegas39     | TOO MUCH MSE ERROR
+vegas4      | TOO MUCH MSE ERROR
+vegas40     | TOO MUCH MSE ERROR
+vegas43     | TOO MUCH MSE ERROR
+vegas44     | TOO MUCH MSE ERROR
+vegas45     | TOO MUCH MSE ERROR
+vegas46     | TOO MUCH MSE ERROR
+vegas47     | TOO MUCH MSE ERROR
+vegas49     | TOO MUCH MSE ERROR
+vegas5      | TOO MUCH MSE ERROR
+vegas50     | TOO MUCH MSE ERROR
+vegas6      | TOO MUCH MSE ERROR
+vegas7      | TOO MUCH MSE ERROR
+veno1       | TOO MUCH MSE ERROR
+veno11      | TOO MUCH MSE ERROR
+veno16      | TOO MUCH MSE ERROR
+veno17      | TOO MUCH MSE ERROR
+veno2       | TOO MUCH MSE ERROR
+veno21      | TOO MUCH MSE ERROR
+veno26      | TOO MUCH MSE ERROR
+veno32      | TOO MUCH MSE ERROR
+veno34      | TOO MUCH MSE ERROR
+veno35      | TOO MUCH MSE ERROR
+veno40      | TOO MUCH MSE ERROR
+veno44      | TOO MUCH MSE ERROR
+veno47      | TOO MUCH MSE ERROR
+veno5       | TOO MUCH MSE ERROR
+veno8       | TOO MUCH MSE ERROR
+veno9       | TOO MUCH MSE ERROR
+cubic31     | Outlier with degree fit = 2
+lp36        | Outlier with degree fit = 2
+bbr13       | Outlier with degree fit = 3
+bbr32       | Outlier with degree fit = 3
+highspeed12 | Outlier with degree fit = 3
+highspeed21 | Outlier with degree fit = 3
+highspeed29 | Outlier with degree fit = 3
+lp29        | Outlier with degree fit = 3
+lp30        | Outlier with degree fit = 3
+lp38        | Outlier with degree fit = 3
+lp50        | Outlier with degree fit = 3
+vegas10     | Outlier with degree fit = 3
+vegas23     | Outlier with degree fit = 3
+vegas41     | Outlier with degree fit = 3
+vegas42     | Outlier with degree fit = 3
+vegas48     | Outlier with degree fit = 3
+vegas8      | Outlier with degree fit = 3
+vegas9      | Outlier with degree fit = 3
+veno10      | Outlier with degree fit = 3
+veno18      | Outlier with degree fit = 3
+veno23      | Outlier with degree fit = 3
+veno25      | Outlier with degree fit = 3
+veno29      | Outlier with degree fit = 3
+veno3       | Outlier with degree fit = 3
+veno30      | Outlier with degree fit = 3
+veno31      | Outlier with degree fit = 3
+veno37      | Outlier with degree fit = 3
+veno38      | Outlier with degree fit = 3
+veno43      | Outlier with degree fit = 3
+veno49      | Outlier with degree fit = 3
+veno6       | Outlier with degree fit = 3
+veno7       | Outlier with degree fit = 3
+dctcp8      | BIC
+lp28        | BIC
+lp37        | BIC
+lp9         | BIC
+westwood1   | BIC
+westwood10  | BIC
+westwood12  | BIC
+westwood14  | BIC
+westwood15  | BIC
+westwood16  | BIC
+westwood17  | BIC
+westwood18  | YEAH
+westwood19  | BIC
+westwood20  | YEAH
+westwood21  | BIC
+westwood22  | BIC
+westwood23  | BIC
+westwood25  | BIC
+westwood26  | YEAH
+westwood27  | YEAH
+westwood28  | BIC
+westwood29  | BIC
+westwood3   | BIC
+westwood31  | YEAH
+westwood32  | BIC
+westwood34  | BIC
+westwood35  | YEAH
+westwood37  | BIC
+westwood38  | BIC
+westwood39  | YEAH
+westwood4   | YEAH
+westwood40  | BIC
+westwood42  | BIC
+westwood43  | YEAH
+westwood44  | BIC
+westwood45  | BIC
+westwood46  | BIC
+westwood47  | BIC
+westwood49  | YEAH
+westwood5   | BIC
+westwood50  | YEAH
+westwood6   | BIC
+westwood7   | BIC
+westwood9   | BIC
+bbr26       | WESTWOOD
+bbr42       | WESTWOOD
+lp32        | WESTWOOD
+lp34        | WESTWOOD
+lp35        | WESTWOOD
+lp42        | WESTWOOD
+lp43        | WESTWOOD
+lp45        | HIGHSPEED
+westwood11  | HIGHSPEED
+westwood13  | WESTWOOD
+westwood2   | HIGHSPEED
+westwood24  | HIGHSPEED
+westwood30  | HIGHSPEED
+westwood33  | HIGHSPEED
+westwood36  | HIGHSPEED
+westwood41  | HIGHSPEED
+westwood48  | HIGHSPEED
+westwood8   | HIGHSPEED
+bbr10       | CUBIC
+bbr17       | CUBIC
+bbr2        | CUBIC
+bbr23       | CUBIC
+bbr33       | CUBIC
+bbr34       | CUBIC
+bbr36       | CUBIC
+bbr39       | CUBIC
+bbr40       | CUBIC
+bbr43       | VENO
+bbr45       | CUBIC
+bbr46       | VENO
+cubic11     | CUBIC
+cubic19     | CUBIC
+cubic2      | CUBIC
+cubic20     | CUBIC
+cubic25     | CUBIC
+cubic33     | CUBIC
+cubic35     | CUBIC
+cubic4      | CUBIC
+cubic44     | HTCP
+cubic5      | CUBIC
+dctcp1      | CUBIC
+dctcp10     | CUBIC
+dctcp11     | CUBIC
+dctcp12     | CUBIC
+dctcp13     | CUBIC
+dctcp14     | CUBIC
+dctcp15     | CUBIC
+dctcp16     | CUBIC
+dctcp17     | CUBIC
+dctcp19     | CUBIC
+dctcp2      | CUBIC
+dctcp20     | CUBIC
+dctcp21     | CUBIC
+dctcp22     | CUBIC
+dctcp23     | CUBIC
+dctcp24     | CUBIC
+dctcp26     | CUBIC
+dctcp27     | CUBIC
+dctcp28     | CUBIC
+dctcp29     | CUBIC
+dctcp3      | CUBIC
+dctcp31     | CUBIC
+dctcp32     | CUBIC
+dctcp33     | CUBIC
+dctcp35     | CUBIC
+dctcp36     | CUBIC
+dctcp37     | CUBIC
+dctcp38     | CUBIC
+dctcp39     | CUBIC
+dctcp4      | CUBIC
+dctcp40     | CUBIC
+dctcp41     | CUBIC
+dctcp42     | CUBIC
+dctcp43     | CUBIC
+dctcp44     | CUBIC
+dctcp45     | CUBIC
+dctcp46     | CUBIC
+dctcp47     | CUBIC
+dctcp48     | CUBIC
+dctcp49     | CUBIC
+dctcp5      | CUBIC
+dctcp50     | VENO
+dctcp6      | CUBIC
+dctcp7      | CUBIC
+dctcp9      | CUBIC
+highspeed16 | CUBIC
+highspeed17 | CUBIC
+highspeed2  | CUBIC
+highspeed20 | CUBIC
+highspeed22 | CUBIC
+highspeed23 | CUBIC
+highspeed24 | CUBIC
+highspeed25 | CUBIC
+highspeed3  | CUBIC
+highspeed31 | CUBIC
+highspeed34 | CUBIC
+highspeed36 | CUBIC
+highspeed37 | CUBIC
+highspeed39 | CUBIC
+highspeed4  | CUBIC
+highspeed40 | CUBIC
+highspeed41 | CUBIC
+highspeed42 | CUBIC
+highspeed43 | CUBIC
+highspeed44 | CUBIC
+highspeed45 | CUBIC
+highspeed46 | CUBIC
+highspeed47 | CUBIC
+highspeed48 | CUBIC
+highspeed49 | CUBIC
+highspeed6  | CUBIC
+highspeed7  | CUBIC
+highspeed8  | CUBIC
+highspeed9  | CUBIC
+lp1         | CUBIC
+lp10        | CUBIC
+lp11        | CUBIC
+lp13        | CUBIC
+lp14        | CUBIC
+lp15        | CUBIC
+lp16        | CUBIC
+lp17        | CUBIC
+lp18        | VENO
+lp19        | CUBIC
+lp2         | CUBIC
+lp20        | CUBIC
+lp21        | CUBIC
+lp22        | CUBIC
+lp23        | CUBIC
+lp24        | CUBIC
+lp25        | CUBIC
+lp26        | VENO
+lp27        | CUBIC
+lp3         | CUBIC
+lp31        | CUBIC
+lp33        | CUBIC
+lp39        | CUBIC
+lp4         | CUBIC
+lp40        | CUBIC
+lp41        | CUBIC
+lp44        | CUBIC
+lp46        | CUBIC
+lp47        | CUBIC
+lp48        | VENO
+lp49        | CUBIC
+lp5         | CUBIC
+lp6         | CUBIC
+lp8         | CUBIC
+reno1       | CUBIC
+reno10      | CUBIC
+reno11      | CUBIC
+reno12      | CUBIC
+reno13      | CUBIC
+reno14      | CUBIC
+reno15      | CUBIC
+reno16      | CUBIC
+reno17      | CUBIC
+reno18      | CUBIC
+reno19      | CUBIC
+reno2       | CUBIC
+reno20      | CUBIC
+reno21      | CUBIC
+reno22      | CUBIC
+reno23      | VENO
+reno24      | CUBIC
+reno25      | CUBIC
+reno26      | CUBIC
+reno27      | CUBIC
+reno28      | CUBIC
+reno29      | CUBIC
+reno3       | CUBIC
+reno30      | CUBIC
+reno31      | CUBIC
+reno32      | CUBIC
+reno33      | CUBIC
+reno34      | CUBIC
+reno35      | CUBIC
+reno36      | CUBIC
+reno37      | CUBIC
+reno38      | CUBIC
+reno39      | CUBIC
+reno4       | CUBIC
+reno40      | CUBIC
+reno41      | CUBIC
+reno42      | CUBIC
+reno43      | CUBIC
+reno44      | VENO
+reno45      | CUBIC
+reno46      | CUBIC
+reno47      | CUBIC
+reno48      | CUBIC
+reno49      | CUBIC
+reno5       | VENO
+reno50      | CUBIC
+reno6       | CUBIC
+reno7       | CUBIC
+reno8       | CUBIC
+reno9       | CUBIC
+veno13      | CUBIC
+veno14      | CUBIC
+veno15      | CUBIC
+veno20      | CUBIC
+veno27      | CUBIC
+veno28      | CUBIC
+veno36      | CUBIC
+veno41      | CUBIC
+veno42      | CUBIC
+veno45      | CUBIC
+veno46      | CUBIC
+veno50      | CUBIC
