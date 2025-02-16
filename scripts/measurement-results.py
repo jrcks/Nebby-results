@@ -61,11 +61,11 @@ with open(file, 'r') as f:
 
 # Farben für bestimmte Ergebnisse festlegen
 colors = {
-    'Error': 'red',                  # Rot für 'Error'
-    'Korrekt': 'black',              # Schwarz für 'Korrekt'
-    'Unbekannt - Grad 1': '#FFA07A', # Hellorange für Unbekannt - Grad 1
-    'Unbekannt - Grad 2': '#FF8C00', # Dunkelorange für Unbekannt - Grad 2
-    'Unbekannt - Grad 3': '#FF4500', # Mittelorange für Unbekannt - Grad 3
+    'Error': '#C50000',              # Tiefrot
+    'Korrekt': 'black',              # Schwarz
+    'Unbekannt - Grad 1': '#FFA07A', # Hellorange
+    'Unbekannt - Grad 2': '#FF8C00', # Mittelorange
+    'Unbekannt - Grad 3': '#FF4500', # Dunkelorange
     'BBR': '#7570b3',      # Violett
     'BIC': '#1f77b4',      # Blau
     'SCALABLE': '#ff7f0e', # Orange
@@ -95,7 +95,7 @@ plt.xlabel('Wirklicher CCA')
 plt.ylabel('Analyseergebnisse')
 plt.title('Nebby Analyseergebnisse für Kontroll-Messungen')
 plt.legend(title='Erkannter CCA', bbox_to_anchor=(1,1), loc='upper left')
-plt.xticks(rotation=45)
+ax.set_xticklabels(df.index, rotation=45, ha='right', rotation_mode='anchor')
 plt.tight_layout()
 
 
