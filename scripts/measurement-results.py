@@ -36,11 +36,9 @@ results = defaultdict(lambda: defaultdict(int))
 with open(file, 'r') as f:
     for line in f:
         measurement = line.split(' | ')
-        if len(measurement) == 2:
-            expected: str = measurement[0].strip().rstrip('0123456789')
+        if len(measurement) >= 2:
+            expected: str = measurement[0].strip().rstrip('0123456789').upper()
             actual: str = measurement[1].strip()
-            
-            expected = expected.upper()
             
             if (actual == "BBR(Maybe)"):
                 actual = "BBR"
