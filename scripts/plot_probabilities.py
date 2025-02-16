@@ -1,4 +1,4 @@
-import os
+import os, sys
 import pickle
 import numpy as np
 from sklearn.naive_bayes import GaussianNB
@@ -6,6 +6,12 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from typing import Dict
+
+if (len(sys.argv) != 2):
+    print(f"Usage: python3 {__file__} <results-file>")
+    sys.exit(1)
+
+file = sys.argv[1]
 
 pickle_dir = os.path.dirname(os.path.realpath(__file__)) + "/pickles"
 
@@ -33,7 +39,7 @@ class ExtendedResult:
     def __str__(self):
         return f"File: {self.file}, BBR: {self.bbr}, Result: {self.result}, Degree: {self.degree}, Coeff: {self.degree_coeff}, Error: {self.degree_error}"
 
-results: Dict[str, ExtendedResult] = pickle.load(open("../../Nebby/analysis" + "/a_results_extended.txt","rb"))
+results: Dict[str, ExtendedResult] = pickle.load(open(file, "rb"))
 
 for degree in degrees:
     # TODO: Data and Probs für Outliers
